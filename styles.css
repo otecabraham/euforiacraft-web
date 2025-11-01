@@ -470,6 +470,48 @@ body::after {
   border-bottom: none;
 }
 
+/* Purchase Info Section */
+.purchase-info {
+  max-width: 700px;
+  margin: 4rem auto 0;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.purchase-info h3 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.purchase-info ol {
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  color: var(--text-secondary);
+  line-height: 2;
+}
+
+.purchase-info ol li {
+  margin-bottom: 0.75rem;
+  padding-left: 0.5rem;
+}
+
+.purchase-info ol li::marker {
+  color: var(--primary-blue);
+  font-weight: 700;
+}
+
 /* Rules */
 .rules-container {
   display: grid;
@@ -820,3 +862,114 @@ body::after {
     padding: 1.5rem;
   }
 }
+
+/* AdminTeam Section */
+.admin-sections {
+  margin-top: 3rem;
+}
+
+.admin-subsection {
+  margin-bottom: 4rem;
+}
+
+.admin-subsection-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.owners-title {
+  /* Owners section title styled in red */
+  background: linear-gradient(135deg, #ff4444, #ff0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.admin-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 2.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.admin-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(0, 95, 219, 0.5);
+  box-shadow: 0 20px 50px rgba(0, 95, 219, 0.3);
+}
+
+.owner-card {
+  /* Owner cards have a red accent border on hover */
+  border: 1px solid rgba(255, 68, 68, 0.3);
+}
+
+.owner-card:hover {
+  border-color: #ff4444;
+  box-shadow: 0 20px 50px rgba(255, 68, 68, 0.3);
+}
+
+.admin-avatar {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.admin-avatar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  border: 2px solid var(--glass-border);
+  transition: all 0.3s ease;
+}
+
+.admin-card:hover .admin-avatar img {
+  border-color: rgba(0, 95, 219, 0.5);
+  box-shadow: 0 0 20px rgba(0, 95, 219, 0.3);
+}
+
+.owner-card:hover .admin-avatar img {
+  border-color: #ff4444;
+  box-shadow: 0 0 20px rgba(255, 68, 68, 0.3);
+}
+
+.admin-name {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.admin-role {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.owner-card .admin-role {
+  /* Owner role text styled in red */
+  color: #ff4444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
