@@ -3,305 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EuforiaCraft - Prémiový Minecraft Server</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>EuforiaCraft</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
+    <div class="wrapper">
+        <header class="header">
             <div class="nav-brand">
+                <!-- Added logo image -->
+                <img src="./public/logo.png" alt="EuforiaCraft Logo" class="logo-img">
                 <span class="logo-text">EuforiaCraft</span>
             </div>
             <ul class="nav-menu" id="navMenu">
-                <!-- Translated navigation links to Czech -->
-                <li><a href="#home" class="nav-link">Domů</a></li>
-                <li><a href="#vip" class="nav-link">VIP</a></li>
-                <li><a href="#rules" class="nav-link">Pravidla</a></li>
-                <li><a href="#contact" class="nav-link">Kontakt</a></li>
-            </ul>
-            <button class="mobile-toggle" id="mobileToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    <span class="glow-text">EuforiaCraft</span>
-                </h1>
-                <!-- Translated hero description to Czech -->
-                <p class="hero-description">
-                    Zažij ultimátní Minecraft dobrodružství s vlastními pluginy, úžasnou komunitou a nekonečnými možnostmi
-                </p>
-                
-                <div class="server-info">
-                    <div class="status-badge">
-                        <span class="status-dot" id="statusDot"></span>
-                        <!-- Translated status text to Czech -->
-                        <span id="statusText">Kontroluji stav...</span>
-                    </div>
-                    
-                    <div class="ip-container">
-                        <div class="ip-box">
-                            <!-- Translated IP label to Czech -->
-                            <span class="ip-label">IP Serveru</span>
-                            <!-- Updated server IP to euforiacraft.eu -->
-                            <span class="ip-address" id="serverIP">euforiacraft.eu</span>
-                        </div>
-                        <button class="btn btn-primary" id="copyBtn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                            </svg>
-                            <!-- Translated button text to Czech -->
-                            Zkopírovat IP
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Translated stats labels to Czech -->
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-number">99.9%</div>
-                        <div class="stat-label">Dostupnost</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- VIP Section -->
-    <section id="vip" class="section">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="glow-text">VIP Ranky</span>
-            </h2>
-            <p class="section-subtitle">Podpoř server a odemkni exkluzivní výhody</p>
-            
-            <div class="vip-grid">
-                <div class="vip-card">
-                    <div class="vip-badge">Eclipse</div>
-                    <h3 class="vip-title">Eclipse</h3>
-                    <div class="vip-price">$4.99<span>/měsíc</span></div>
-                    <!-- Translated VIP features to Czech -->
-                    <ul class="vip-features">
-                        <li>✓ Barevné jméno v chatu</li>
-                        <li>✓ 2 extra domy</li>
-                        <li>✓ Přístup k /fly</li>
-                        <li>✓ VIP-only oblasti</li>
-                        <li>✓ Prioritní podpora</li>
-                    </ul>
-                    <button class="btn btn-secondary">Získat Eclipse</button>
-                </div>
-
-                <div class="vip-card featured">
-                    <div class="vip-badge premium">Zenith</div>
-                    <div class="popular-tag">Nejoblíbenější</div>
-                    <h3 class="vip-title">Zenith</h3>
-                    <div class="vip-price">$9.99<span>/měsíc</span></div>
-                    <!-- Translated VIP+ features to Czech -->
-                    <ul class="vip-features">
-                        <li>✓ Vše z Eclipse</li>
-                        <li>✓ 5 extra domů</li>
-                        <li>✓ Vlastní efekty částic</li>
-                        <li>✓ Přístup k /nick</li>
-                        <li>✓ Exkluzivní kosmetika</li>
-                        <li>✓ Měsíční odměny</li>
-                    </ul>
-                    <button class="btn btn-primary">Získat Zenith</button>
-                </div>
-
-                <div class="vip-card">
-                    <div class="vip-badge elite">Aurora</div>
-                    <h3 class="vip-title">Aurora</h3>
-                    <div class="vip-price">$19.99<span>/měsíc</span></div>
-                    <ul class="vip-features">
-                        <li>✓ Vše z Zenith</li>
-                        <li>✓ Neomezené domy</li>
-                        <li>✓ Vlastní zprávy při připojení</li>
-                        <li>✓ Přístup k /god módu</li>
-                        <li>✓ Exkluzivní mazlíčci</li>
-                        <li>✓ Prioritní fronta</li>
-                    </ul>
-                    <button class="btn btn-secondary">Získat Aurora</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Rules Section -->
-    <section id="rules" class="section">
-        <div class="container">
-            <h2 class="section-title">
-                <!-- Translated rules section title to Czech -->
-                <span class="glow-text">Pravidla Serveru</span>
-            </h2>
-            <p class="section-subtitle">Dodržuj tato pravidla, aby byl EuforiaCraft zábavný pro všechny</p>
-            
-            <!-- Translated all rules to Czech -->
-            <div class="rules-container">
-                <div class="rule-card">
-                    <div class="rule-number">01</div>
-                    <h3 class="rule-title">Respektuj Všechny</h3>
-                    <p class="rule-description">Buď milý a respektující ke všem hráčům a členům týmu. Žádné obtěžování, šikana nebo toxické chování.</p>
-                </div>
-
-                <div class="rule-card">
-                    <div class="rule-number">02</div>
-                    <h3 class="rule-title">Žádné Cheaty</h3>
-                    <p class="rule-description">Hacknuté klienty, x-ray a jakékoliv neférové výhody jsou přísně zakázány a povedou k permanentnímu banu.</p>
-                </div>
-
-                <div class="rule-card">
-                    <div class="rule-number">03</div>
-                    <h3 class="rule-title">Žádný Griefing</h3>
-                    <p class="rule-description">Neničte ani neupravujte stavby jiných hráčů bez povolení. Respektujte tvorbu všech.</p>
-                </div>
-
-                <div class="rule-card">
-                    <div class="rule-number">04</div>
-                    <h3 class="rule-title">Udržuj Chat Čistý</h3>
-                    <p class="rule-description">Žádný spam, nadměrné caps nebo nevhodný jazyk. Udržuj chat přátelský a vstřícný.</p>
-                </div>
-
-                <div class="rule-card">
-                    <div class="rule-number">05</div>
-                    <h3 class="rule-title">Žádná Reklama</h3>
-                    <p class="rule-description">Reklama na jiné servery nebo služby není povolena. To zahrnuje chat, cedule a knihy.</p>
-                </div>
-
-                <div class="rule-card">
-                    <div class="rule-number">06</div>
-                    <h3 class="rule-title">Poslouchej Tým</h3>
-                    <p class="rule-description">Následuj všechny pokyny od členů týmu. Jsou tu, aby pomáhali a udržovali server v chodu.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">
-                <!-- Translated contact section title to Czech -->
-                <span class="glow-text">Kontaktuj Nás</span>
-            </h2>
-            <p class="section-subtitle">Připoj se k naší komunitě a zůstaň ve spojení</p>
-            
-            <!-- Translated contact cards to Czech -->
-            <div class="contact-grid">
-                <a href="https://discord.gg/Utu7u7K9UM" target="_blank" class="contact-card discord">
-                    <div class="contact-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.077.077 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"/>
-                        </svg>
-                    </div>
-                    <h3>Discord</h3>
-                    <p>Připoj se k našemu komunitnímu serveru</p>
-                    <span class="contact-link">discord.gg/Utu7u7K9UM →</span>
-                </a>
-            </div>
-
-            <!-- Translated contact form to Czech -->
-            <div class="contact-form-container">
-                <h3 class="form-title">Pošli nám Zprávu</h3>
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Tvé Jméno" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Tvůj Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" rows="5" placeholder="Tvá Zpráva" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Odeslat Zprávu</button>
-                </form>
-                <div class="form-success" id="formSuccess">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    Zpráva úspěšně odeslána!
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <span class="logo-text">EuforiaCraft</span>
-                    <!-- Translated footer tagline to Czech -->
-                    <p>Ultimátní Minecraft zážitek</p>
-                </div>
-                <!-- Translated footer links to Czech -->
-                <div class="footer-links">
-                    <a href="#home">Domů</a>
-                    <a href="#vip">VIP</a>
-                    <a href="#rules">Pravidla</a>
-                    <a href="#contact">Kontakt</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <!-- Translated copyright text to Czech -->
-                <p>&copy; 2025 EuforiaCraft. Všechna práva vyhrazena.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
-<ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link">Domů</a></li>
                 <li><a href="#vip" class="nav-link">VIP</a></li>
                 <li><a href="#rules" class="nav-link">Pravidla</a></li>
                 <li><a href="#admin" class="nav-link">Tým</a></li>
                 <li><a href="#contact" class="nav-link">Kontakt</a></li>
             </ul>
+        </header>
 
-    <!-- AdminTeam Section -->
-    <section id="admin" class="section">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="glow-text">Administrační Tým</span>
-            </h2>
-            <p class="section-subtitle">Seznamte se s lidmi za EuforiaCraft</p>
-            
-            <div class="admin-sections">
-                <!-- Owners Section -->
-                <div class="admin-subsection">
-                    <h3 class="admin-subsection-title owners-title">Majitelé</h3>
-                    <div class="admin-grid">
-                        <div class="admin-card owner-card">
-                            <div class="admin-avatar">
-                                <img src="https://mc-heads.net/avatar/otecabraham/80" alt="otecabraham minecraft skin" loading="lazy">
+        <!-- AdminTeam Section -->
+        <section id="admin" class="section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="glow-text">Administrační Tým</span>
+                </h2>
+                <p class="section-subtitle">Seznamte se s lidmi za EuforiaCraft</p>
+                
+                <div class="admin-sections">
+                    <!-- Owners Section -->
+                    <div class="admin-subsection">
+                        <h3 class="admin-subsection-title owners-title">Majitelé</h3>
+                        <div class="admin-grid">
+                            <div class="admin-card owner-card">
+                                <div class="admin-avatar">
+                                    <img src="https://mc-heads.net/avatar/otecabraham/80" alt="otecabraham minecraft skin" loading="lazy">
+                                </div>
+                                <h4 class="admin-name">otecabraham</h4>
+                                <p class="admin-role">Majitel</p>
                             </div>
-                            <h4 class="admin-name">otecabraham</h4>
-                            <p class="admin-role">Majitel</p>
-                        </div>
-                        
-                        <div class="admin-card owner-card">
-                            <div class="admin-avatar">
-                                <img src="https://mc-heads.net/avatar/zeuscz128/80" alt="zeuscz128 minecraft skin" loading="lazy">
+                            
+                            <div class="admin-card owner-card">
+                                <div class="admin-avatar">
+                                    <img src="https://mc-heads.net/avatar/zeuscz128/80" alt="zeuscz128 minecraft skin" loading="lazy">
+                                </div>
+                                <h4 class="admin-name">zeuscz128</h4>
+                                <p class="admin-role">Majitel</p>
                             </div>
-                            <h4 class="admin-name">zeuscz128</h4>
-                            <p class="admin-role">Majitel</p>
                         </div>
                     </div>
                 </div>
+                <div class="server-info">
+                    <!-- Removed status badge -->
+                    <div class="ip-container">
+                        <div class="ip-box">
+                            <span class="ip-label">Server IP</span>
+                            <span class="ip-address">euforiacraft.eu</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="copyIP()">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                            </svg>
+                            Zkopírovat IP
+                        </button>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <h3>EuforiaCraft</h3>
+                        <p>Premium Minecraft Server</p>
+                    </div>
+                    <div class="footer-links">
+                        <a href="#home">Domů</a>
+                        <a href="#vip">VIP</a>
+                        <a href="#rules">Pravidla</a>
+                        <a href="#admin">Tým</a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 EuforiaCraft. Všechna práva vyhrazena.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function copyIP() {
+            const ip = document.querySelector('.ip-address').innerText;
+            navigator.clipboard.writeText(ip).then(() => {
+                alert('IP adresa byla zkopírována: ' + ip);
+            }, err => {
+                console.error('Nelze zkopírovat IP adresu: ', err);
+            });
+        }
+    </script>
+</body>
+</html>

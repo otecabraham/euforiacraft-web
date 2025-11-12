@@ -178,4 +178,3 @@ document.querySelectorAll(".vip-card, .rule-card, .stat-card, .contact-card").fo
   el.style.transition = "opacity 0.6s ease, transform 0.6s ease"
   observer.observe(el)
 })
-

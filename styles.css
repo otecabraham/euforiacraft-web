@@ -95,6 +95,25 @@ body::after {
   text-shadow: 0 0 30px rgba(0, 95, 219, 0.5);
 }
 
+/* Added logo image styling */
+.logo-img {
+  height: 40px;
+  width: auto;
+  margin-right: 0.5rem;
+  filter: drop-shadow(0 0 10px rgba(0, 95, 219, 0.3));
+  animation: logoFloat 3s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
 .nav-menu {
   display: flex;
   list-style: none;
@@ -181,10 +200,10 @@ body::after {
 @keyframes glow {
   0%,
   100% {
-    filter: drop-shadow(0 0 30px rgba(0, 95, 219, 0.6));
+    filter: drop_shadow(0 0 30px rgba(0, 95, 219, 0.6));
   }
   50% {
-    filter: drop-shadow(0 0 50px rgba(114, 35, 242, 0.8));
+    filter: drop_shadow(0 0 50px rgba(114, 35, 242, 0.8));
   }
 }
 
@@ -972,4 +991,3 @@ body::after {
     grid-template-columns: 1fr;
   }
 }
-
